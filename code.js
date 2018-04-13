@@ -2,7 +2,7 @@ var storyButton = document.getElementById('clik-4-stories')
 
 storyButton.addEventListener('click', function () {
   var hiddenPlace = window.prompt('This is a game called In the Dark. A 16-year-old student from a rich family was kidnapped by two young girls. His name is Wil and was locked in a room. One girl said we sholud remove him to the basement. Another girl said he should be moved to the barn. If you were Wil, you wanted to stay in which places. Choose room, basement or barn.')
-  if (hiddenPlace === null || undefined) {
+  if (hiddenPlace === null || hiddenPlace === undefined) {
     window.alert('Are you sure? Cancel?')
   }
   hiddenPlace = hiddenPlace.toLowerCase().trim()
@@ -18,7 +18,7 @@ storyButton.addEventListener('click', function () {
   if (hiddenPlace) {
     if (hiddenPlace === 'basement') {
       var userEquipChoiceInBasement = window.prompt('In the basement, Wil decides to take equipmets to protect himself and run away. He saw a knife, lighters, bricks, and 3 different size of hammers. How many equipmets did Wil have?')
-      if (userEquipChoiceInBasement === null || undefined) {
+      if (userEquipChoiceInBasement === null || userEquipChoiceInBasement === undefined) {
         window.alert('Why do you want to cacel? Don\'t you want to know the story?')
       }
       userEquipChoiceInBasement = userEquipChoiceInBasement.toLowerCase().trim()
@@ -28,7 +28,7 @@ storyButton.addEventListener('click', function () {
       window.alert('Wil felts comfortable with that stuff!!')
     } else if (hiddenPlace === 'barn') {
       var userEquipChoiceInBarn = window.prompt('In the barn, Wil can get weeder and sawmill. How many equipmets did Wil have?')
-      if (userEquipChoiceInBarn === null || undefined) {
+      if (userEquipChoiceInBarn === null || userEquipChoiceInBarn === undefined) {
         window.alert('What? You don\'t have to click the cancel button.')
       }
       userEquipChoiceInBarn = userEquipChoiceInBarn.toLowerCase().trim()
@@ -38,7 +38,7 @@ storyButton.addEventListener('click', function () {
       window.alert('Just 2 choices. They would be helpful?!')
     } else if (hiddenPlace === 'room') {
       var userEquipChoiceInRoom = window.prompt('Oh, Wil cannot see anything in this room. How many equipmets did he have?')
-      if (userEquipChoiceInRoom === null || undefined) {
+      if (userEquipChoiceInRoom === null || userEquipChoiceInRoom === undefined) {
         window.alert('Give up to know the whole story?')
       }
       userEquipChoiceInRoom = userEquipChoiceInRoom.toLowerCase().trim()
