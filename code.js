@@ -2,6 +2,9 @@ var storyButton = document.getElementById('clik-4-stories')
 
 storyButton.addEventListener('click', function () {
   var hiddenPlace = window.prompt('This is a game called In the Dark. A 16-year-old student from a rich family was kidnapped by two young girls. His name is Wil and was locked in a room. One girl said we sholud remove him to the basement. Another girl said he should be moved to the barn. If you were Wil, you wanted to stay in which places. Choose room, basement or barn.')
+  if (hiddenPlace === null || undefined) {
+    window.alert('Are you sure? Cancel?')
+  }
   hiddenPlace = hiddenPlace.toLowerCase().trim()
   if (hiddenPlace === 'room') {
     window.alert('The room is empty but it\'s next to a street. Wil can get a chance to find someone for help.')
@@ -10,32 +13,35 @@ storyButton.addEventListener('click', function () {
   } else if (hiddenPlace === 'barn') {
     window.alert('There are several equipments in the barn and it smells bad in there.')
   } else {
-    window.alert('Choose one of the places!')
+    window.alert('Room, basement or barn. Choose one of them!')
   }
   if (hiddenPlace) {
     if (hiddenPlace === 'basement') {
       var userEquipChoiceInBasement = window.prompt('In the basement, Wil decides to take equipmets to protect himself and run away. He saw a knife, lighters, bricks, and 3 different size of hammers. How many equipmets did Wil have?')
-      if (hiddenPlace || userEquipChoiceInBasement) {
-        window.alert('Lots of choice. It might help Wil out')
+      if (userEquipChoiceInBasement === null || undefined) {
+        window.alert('Why do you want to cacel? Don\'t you want to know the story?')
       }
+      userEquipChoiceInBasement = userEquipChoiceInBasement.toLowerCase().trim()
       if (isNaN(userEquipChoiceInBasement)) {
         userEquipChoiceInBasement = 6
       }
       window.alert('Wil felts comfortable with that stuff!!')
     } else if (hiddenPlace === 'barn') {
       var userEquipChoiceInBarn = window.prompt('In the barn, Wil can get weeder and sawmill. How many equipmets did Wil have?')
-      if (hiddenPlace || userEquipChoiceInBarn) {
-        window.alert('Just 2 choices. They would be helpful?!')
+      if (userEquipChoiceInBarn === null || undefined) {
+        window.alert('What? You don\'t have to click the cancel button.')
       }
+      userEquipChoiceInBarn = userEquipChoiceInBarn.toLowerCase().trim()
       if (isNaN(userEquipChoiceInBarn)) {
         userEquipChoiceInBarn = 2
       }
-      window.alert('Probably!')
+      window.alert('Just 2 choices. They would be helpful?!')
     } else if (hiddenPlace === 'room') {
       var userEquipChoiceInRoom = window.prompt('Oh, Wil cannot see anything in this room. How many equipmets did he have?')
-      if (hiddenPlace && userEquipChoiceInRoom) {
-        window.alert('Maybe he needs to find other way to escape.')
+      if (userEquipChoiceInRoom === null || undefined) {
+        window.alert('Give up to know the whole story?')
       }
+      userEquipChoiceInRoom = userEquipChoiceInRoom.toLowerCase().trim()
     } else {
       window.alert('Oh, Wil got nothing to use to escape')
     }
